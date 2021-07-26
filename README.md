@@ -14,7 +14,7 @@ using s3 notification syncer will reflect any change in the source bucket also i
 - Step 0: make sure you have aws cli configure correctly
 - Step 1: cd syncer && pip3 install -r requirements.txt && chalice deploy
 - Step 2: log in to aws console and make sure the lambda we created have the needed permissions and the environment variables of SOURCE_BUCKET/TARGET_BUCKET configured correctly.
-- Step 3: run syncer docker image, go to /migrate/README.md for more details (recommended run as ECS Fargate task, block s3 changes will syncing)
+- Step 3: run syncer docker image, go to /migrate/README.md for more details (recommended run as ECS Fargate task, block s3 changes while syncing)
 
 ## TODO
 
