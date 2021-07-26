@@ -7,6 +7,7 @@ Introducing a new approach to cloud storage. Lyve™ Cloud from Seagate® is you
 What is s3-syncer?
 
 s3 synchronization automation, deploy syncer to your aws account and connect to the bucket you wish to sync with Lyve Cloud storage.
+using s3 notification syncer will reflect any change in the source bucket also in the target bucket and keep them in sync.
 
 ## Setup
 
