@@ -9,4 +9,4 @@ run the dockerfile with the following environment variables:
 - TARGET_BUCKET
 - ENDPOINT
 
-* you can adujst sync filter by editing include/exclude in migrate/sync/py \*
+you can adujst sync filter by editing include/exclude in migrate/sync/py
