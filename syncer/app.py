@@ -7,8 +7,8 @@ s3 = boto3.resource('s3')
 app = Chalice(app_name='syncer', debug=True)
 
 source_bucket = os.getenv(
-    'SOURCE_BUCKET', 'prod-policyerorg-platform-users-data')
-target_bucket = os.getenv('TARGET_BUCKET', 'nit-test-bucket')
+    'SOURCE_BUCKET', 'na-test-1')
+target_bucket = os.getenv('TARGET_BUCKET', 'na-test-2')
 source_prefix = ''
 
 
@@ -28,6 +28,7 @@ def handle_create_object(event):
         bucket = s3.Bucket(target_bucket)
         bucket.copy(copy_source, event.key)
         app.log.info("create sync complete")
+
 
 @app.on_s3_event(bucket=source_bucket, prefix=source_prefix, events=['s3:ObjectRemoved:*'])
 def handle_remove_object(event):
