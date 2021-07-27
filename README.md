@@ -21,3 +21,8 @@ using s3 notification syncer will reflect any change in the source bucket also i
 - smart sync with thread pool and concurrent processes
 - easier configuration
 - run as a service
+- improve copy
+
+[sync video](https://www.loom.com/share/11e098376d8548ddb35a1f6ec4266e2e)
+
+![sync](https://cdn.loom.com/sessions/thumbnails/11e098376d8548ddb35a1f6ec4266e2e-with-play.gif)
