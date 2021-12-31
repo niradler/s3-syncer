@@ -55,6 +55,18 @@ syncer is a lambda function base on python (3.8)
 - aws cli support to pass just one endpoint url (we need to use a buffer at the moment to copy from one bucket to another if endpoint is not the same)
 - develop on windows machine and docker.
 
+## Demo and examples
+
 [sync video](https://www.loom.com/share/11e098376d8548ddb35a1f6ec4266e2e)
 
 ![sync](https://cdn.loom.com/sessions/thumbnails/11e098376d8548ddb35a1f6ec4266e2e-with-play.gif)
+
+![Create object lambda](images/syncer_create.PNG?raw=true "Create object lambda")
+
+![Remove object lambda](images/syncer_remove.PNG?raw=true "Remove object lambda")
+
+![Remove object lambda](images/syncer_remove.PNG?raw=true "Remove object lambda")
+
+![Buckets](images/syncer_remove.PNG?raw=true "Buckets")
+
+![Logs](images/logs.PNG?raw=true "Logs")

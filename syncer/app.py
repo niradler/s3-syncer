@@ -5,12 +5,12 @@ from botocore.client import Config
 
 s3 = boto3.resource(
     's3',
-    aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID', 'TEST_KEY_ID'),
-    aws_secret_access_key=os.getenv(
-        'AWS_ACCESS_KEY_SECRET', 'TEST_KEY_SECRET'),
-    region_name=os.getenv('AWS_DEFAULT_REGION', 'us-east-1'),
-    config=Config(signature_version='s3v4'),
-    endpoint_url='https://s3.us-east-1.lyvecloud.seagate.com'
+    # aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID', 'TEST_KEY_ID'),
+    # aws_secret_access_key=os.getenv(
+    #     'AWS_ACCESS_KEY_SECRET', 'TEST_KEY_SECRET'),
+    # region_name=os.getenv('AWS_DEFAULT_REGION', 'us-east-1'),
+    # config=Config(signature_version='s3v4'),
+    # endpoint_url='https://s3.us-east-1.lyvecloud.seagate.com'
 )
 
 sourceS3 = boto3.resource('s3')
