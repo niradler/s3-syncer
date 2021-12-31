@@ -65,6 +65,6 @@ syncer is a lambda function base on python (3.8)
 
 ![Remove object lambda](images/syncer_remove.PNG?raw=true "Remove object lambda")
 
-![Buckets](images/syncer_remove.PNG?raw=true "Buckets")
+![Buckets](images/buckets.PNG?raw=true "Buckets")
 
 ![Logs](images/logs.PNG?raw=true "Logs")
