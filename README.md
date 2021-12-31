@@ -48,7 +48,6 @@ syncer is a lambda function base on python (3.8)
 - easier configuration
 - run as a service
 - improve copy
-- aws cli limitation to pass just one endpoint url (we need to use a buffer at the moment)
 
 ## Notes
 
