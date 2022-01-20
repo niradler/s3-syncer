@@ -5,12 +5,12 @@ from botocore.client import Config
 
 s3 = boto3.resource(
     's3',
-    # aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID', 'TEST_KEY_ID'),
-    # aws_secret_access_key=os.getenv(
-    #     'AWS_ACCESS_KEY_SECRET', 'TEST_KEY_SECRET'),
-    # region_name=os.getenv('AWS_DEFAULT_REGION', 'us-east-1'),
-    # config=Config(signature_version='s3v4'),
-    # endpoint_url='https://s3.us-east-1.lyvecloud.seagate.com'
+    aws_access_key_id=os.getenv('AWS_ACCESS_KEY_ID', 'TEST_KEY_ID'),
+    aws_secret_access_key=os.getenv(
+        'AWS_ACCESS_KEY_SECRET', 'TEST_KEY_SECRET'),
+    region_name=os.getenv('AWS_DEFAULT_REGION', 'us-east-1'),
+    config=Config(signature_version='s3v4'),
+    endpoint_url='https://s3.us-east-1.lyvecloud.seagate.com'
 )
 
 sourceS3 = boto3.resource('s3')
@@ -19,7 +19,7 @@ app = Chalice(app_name='syncer', debug=True)
 
 source_bucket = os.getenv(
     'SOURCE_BUCKET', 'sync-test-2')
-target_bucket = os.getenv('TARGET_BUCKET', 'sync-test-3')
+target_bucket = os.getenv('TARGET_BUCKET', 'syncer-nir')
 source_prefix = ''
 
 
@@ -39,6 +39,7 @@ def handle_create_object(event):
         app.log.info(file_path)
         os.chdir('/tmp')
         bucket.download_file(event.key, file_path)
+        app.log.info("downloaded file")
         bucket = s3.Bucket(target_bucket)
         bucket.upload_file(file_path, event.key)
         app.log.info("create sync complete")
