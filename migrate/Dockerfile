@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.8
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
@@ -8,10 +8,10 @@ ENV AWS_SECRET_ACCESS_KEY KTYTBE125EP3NW3005ZXGYVAYZMEW24*
 ADD requirements.txt .
 RUN python -m pip install -r requirements.txt
 
+VOLUME [ "/data" ]
+
 WORKDIR /app
 ADD . /app
 
 RUN useradd appuser && chown -R appuser /app
 USER appuser
-
-CMD ["python", "sync.py"]
