@@ -19,8 +19,6 @@ the sync process will handle diff changes and will not copy object that already 
 
 due to the lack of support for more then one endpoint, without modifying the aws cli, you need to do the migration in 2 steps:
 
-1. diff
-
 ```
 docker build -t s3syncer .
 docker run --name s3syncer --rm -i -t s3syncer bash
