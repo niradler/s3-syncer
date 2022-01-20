@@ -12,6 +12,3 @@ VOLUME [ "/data" ]
 
 WORKDIR /app
 ADD . /app
-
-RUN useradd appuser && chown -R appuser /app
-USER appuser
