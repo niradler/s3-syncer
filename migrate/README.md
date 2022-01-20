@@ -35,5 +35,3 @@ export AWS_SECRET_ACCESS_KEY=SECERT
 export ENDPOINT=ENDPOINT
 python restore.py
 ```
-
-2.
