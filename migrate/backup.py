@@ -1,8 +1,7 @@
 import os
 from subprocess import check_output
 
-source_bucket = os.getenv(
-    'SOURCE_BUCKET', 'na-test-1')
+source_bucket = os.getenv('SOURCE_BUCKET', 'aws-bucket')
 target_folder = os.getenv('TARGET_FOLDER', './data')
 source_prefix = ''
 exclude = []
