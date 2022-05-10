@@ -1,9 +1,8 @@
 import os
 from subprocess import check_output
 
-source_bucket = os.getenv(
-    'SOURCE_BUCKET', 'na-test-1')
-target_bucket = os.getenv('TARGET_BUCKET', 'na-test-2')
+source_bucket = os.getenv('SOURCE_BUCKET', 'aws-bucket')
+target_bucket = os.getenv('TARGET_BUCKET', 'lyvecloud-bucket')
 source_prefix = ''
 exclude = []
 include = []
